@@ -1,0 +1,11 @@
+syntax = "proto3";
+//protoc --proto_path=src/ --go_out=pb/ src/*.proto
+option go_package = "third/";
+
+message Person{
+  int32 id = 1;
+  repeated Hobby hobbies = 2;
+}
+message Hobby{
+  string name = 1;
+}
